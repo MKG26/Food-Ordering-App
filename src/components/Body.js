@@ -44,7 +44,7 @@ const Body = () => {
     <div className="body">
         <div className="filter">
             <div className="search">
-                <input className="searchBox" type="text" value={searchtext}/>
+                <input className="searchBox" type="text" value={searchtext} onChange={(e) => setSearchText(e.target.value)}/>
                 <button className="searchButton" >Search</button>
             </div>
 
