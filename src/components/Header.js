@@ -6,7 +6,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Title = () => {
   return (
     <a href="/">
-      <img className="w-24" alt="logo" src={LOGO_URL} />
+      <img className="ml-20 w-20" alt="logo" src={LOGO_URL} />
     </a>
   );
 };
@@ -17,32 +17,36 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="flex justify-between p-2 bg-yellow-200 shadow-lg mb-2">
+    <div className="flex justify-between p-2 shadow-lg mb-2">
       <Title />
 
       <div className="flex items-center">
         <ul className="flex">
-          <li className="px-4 py-3">
+          <li className="font-medium px-4 py-3">
             Online Status: {onlineStatus ? "✅" : "❌"}{" "}
           </li>
           <Link to="/">
-            <li className="px-4 py-3 hover:bg-white rounded-lg">Home</li>
+            <li className="font-medium px-4 py-3 hover:text-red-500">Home</li>
           </Link>
           <Link to="/about">
-            <li className="px-4 py-3 hover:bg-white rounded-lg">About</li>
+            <li className="font-medium px-4 py-3 hover:text-red-500">About</li>
           </Link>
           <Link to="/contact">
-            <li className="px-4 py-3 hover:bg-white rounded-lg">Contact</li>
+            <li className="font-medium px-4 py-3 hover:text-red-500">
+              Contact
+            </li>
           </Link>
           <Link to="/grocery">
-            <li className="px-4 py-3 hover:bg-white rounded-lg">Grocery</li>
+            <li className="font-medium px-4 py-3 hover:text-red-500">
+              Grocery
+            </li>
           </Link>
-          <li className="px-4 py-3 hover:bg-white rounded-lg">Cart</li>
+          <li className="font-medium px-4 py-3 hover:text-red-500">Cart</li>
           <button
             onClick={() =>
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
             }
-            className="px-4 py-3 hover:bg-white rounded-lg"
+            className="font-medium px-4 py-3 hover:text-red-500"
           >
             {btnName}
           </button>
