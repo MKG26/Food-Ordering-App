@@ -6,7 +6,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Title = () => {
   return (
     <a href="/">
-      <img className="logo" alt="logo" src={LOGO_URL} />
+      <img className="w-24" alt="logo" src={LOGO_URL} />
     </a>
   );
 };
@@ -17,30 +17,32 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
+    <div className="flex justify-between p-2 bg-yellow-200 shadow-lg mb-2">
       <Title />
 
-      <div className="nav-items">
-        <ul>
-          <li>Online Status: {onlineStatus ? "✅" : "❌"} </li>
-          <li>
-            <Link to="/">Home</Link>
+      <div className="flex items-center">
+        <ul className="flex">
+          <li className="px-4 py-3">
+            Online Status: {onlineStatus ? "✅" : "❌"}{" "}
           </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/grocery">Grocery</Link>
-          </li>
-          <li>Cart</li>
+          <Link to="/">
+            <li className="px-4 py-3 hover:bg-white rounded-lg">Home</li>
+          </Link>
+          <Link to="/about">
+            <li className="px-4 py-3 hover:bg-white rounded-lg">About</li>
+          </Link>
+          <Link to="/contact">
+            <li className="px-4 py-3 hover:bg-white rounded-lg">Contact</li>
+          </Link>
+          <Link to="/grocery">
+            <li className="px-4 py-3 hover:bg-white rounded-lg">Grocery</li>
+          </Link>
+          <li className="px-4 py-3 hover:bg-white rounded-lg">Cart</li>
           <button
             onClick={() =>
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
             }
-            className="loginButton"
+            className="px-4 py-3 hover:bg-white rounded-lg"
           >
             {btnName}
           </button>
