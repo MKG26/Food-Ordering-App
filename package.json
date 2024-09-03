@@ -1,32 +1,22 @@
 {
-  "homepage": "https://MKG26.github.io/Food-Ordering-App",
-  "name": "react",
+  "name": "food-ordering-app",
   "version": "1.0.0",
   "description": "",
+  "main": "tailwind.config.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "babel-plugin-transform-remove-console": "^6.9.4",
-    "gh-pages": "^6.1.1",
-    "parcel": "^2.12.0",
-    "postcss": "^8.4.42",
-    "process": "^0.11.10",
-    "tailwindcss": "^3.4.10"
-  },
   "dependencies": {
+    "parcel": "^2.12.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1"
   },
-  "browserslist": [
-    "last 2 version"
-  ]
+  "devDependencies": {
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.10"
+  }
 }

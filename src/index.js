@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header.js";
 import Body from "./components/Body.js";
-import Footer from "./components/Footer.js";
+
 import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Error from "./components/Error.js";
@@ -10,9 +10,6 @@ import RestaurantMenu from "./components/RestaurantMenu.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Shimmer from "./components/Shimmer.js";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-const basename = "/Food-Ordering-App";
 
 const Grocery = lazy(() => import("./components/Grocery.js"));
 
@@ -29,19 +26,19 @@ const appRouter = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        path: "${basename}/",
+        path: "/",
         element: <Body />,
       },
       {
-        path: "${basename}/about",
+        path: "/about",
         element: <About />,
       },
       {
-        path: "${basename}/contact",
+        path: "/contact",
         element: <Contact />,
       },
       {
-        path: "${basename}/grocery",
+        path: "/grocery",
         element: (
           <Suspense fallback={<Shimmer />}>
             <Grocery />
@@ -49,7 +46,7 @@ const appRouter = createBrowserRouter([
         ),
       },
       {
-        path: "${basename}/restaurant/:resId",
+        path: "/restaurant/:resId",
         element: <RestaurantMenu />,
       },
     ],
@@ -59,8 +56,4 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(
-  <Router basename={basename}>
-    <RouterProvider router={appRouter} />
-  </Router>
-);
+root.render(<RouterProvider router={appRouter} />);
