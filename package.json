@@ -2,7 +2,7 @@
   "name": "food-ordering-app",
   "version": "1.0.0",
   "description": "",
-  "main": "tailwind.config.html",
+  "main": "tailwind.config.js",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
