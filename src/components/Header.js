@@ -17,7 +17,7 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="flex justify-between p-2 shadow-lg mb-2">
+    <div className="flex justify-between p-2 shadow-lg mb-2 ">
       <Title />
 
       <div className="flex items-center">
