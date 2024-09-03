@@ -1,0 +1,2 @@
+var e=("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequire77dd;(0,e.register)("6okWW",function(o,n){Object.defineProperty(o.exports,"__esModule",{value:!0,configurable:!0}),Object.defineProperty(o.exports,"default",{get:function(){return r},set:void 0,enumerable:!0,configurable:!0});var i=e("jk232"),r=()=>(0,i.jsx)("h1",{children:"This is Grocery section"})});
+//# sourceMappingURL=Grocery.3fe76d97.js.map
