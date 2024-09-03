@@ -1,11 +1,11 @@
 {
-  "homepage": "https://mkg26.github.io/Food-Ordering-App",
+  "homepage": "https://MKG26.github.io/Food-Ordering-App",
   "name": "react",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "deploy": "gh-pages -d build",
     "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
