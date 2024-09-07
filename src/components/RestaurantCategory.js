@@ -1,24 +1,22 @@
 import ItemList from "./ItemList";
-import { useState } from "react";
-const RestaurantCategory = ({ data }) => {
-  const [showList, setShowList] = useState(false);
+
+import { IoIosArrowDown } from "react-icons/io";
+const RestaurantCategory = ({ data, showList, setShowIndex }) => {
   return (
     <>
-      <div className=" w-6/12 bg-gray-50 m-auto shadow-xl my-3 p-4 rounded-md">
+      <div className=" w-6/12 bg-gray-50 m-auto shadow-xl my-3  rounded-md">
         <div
-          className="flex justify-between cursor-pointer"
-          onClick={() => setShowList(!showList)}
+          className="flex justify-between cursor-pointer p-4"
+          onClick={() => setShowIndex()}
         >
           <span className="font-bold text-lg ">
             {data?.title} ({data?.itemCards.length})
           </span>
-          <span>⬇️</span>
+          <span>
+            <IoIosArrowDown size={30} className="p-1" />
+          </span>
         </div>
-        <div className="">
-          {data.title === "Recommended"
-            ? !showList && <ItemList list={data.itemCards} />
-            : showList && <ItemList list={data.itemCards} />}
-        </div>
+        <div className="">{showList && <ItemList list={data.itemCards} />}</div>
       </div>
     </>
   );
