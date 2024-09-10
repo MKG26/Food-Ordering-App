@@ -9,7 +9,10 @@ const RestaurantCard = ({
   sla,
 }) => {
   return (
-    <div className="m-8 w-60 transform transition duration-500 hover:scale-110">
+    <div
+      data-testid="resCard"
+      className="m-8 w-60 transform transition duration-500 hover:scale-110"
+    >
       <img
         className="rounded-3xl h-40 w-60 object-cover shadow-md mb-5 "
         src={IMG_CDN_URL + cloudinaryImageId}
